@@ -24,8 +24,11 @@ a {
   text-decoration: none;
 }
 
+input,
 button {
+  font: inherit;
   cursor: pointer;
+  outline: transparent;
 }
 
 img {
