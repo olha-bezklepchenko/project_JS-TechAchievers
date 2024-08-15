@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative;
+    width: 375px;
+    height: 508px;
+    overflow: hidden;
+    background-image: url(/src/img/covers/elements_vectors.png);
+}
+
+.marquee {
+    position: absolute;
+    width: 200%;
+    /* Подвоєна ширина для дублювання контенту */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: marquee 10s linear infinite;
+    /* Плавна безперервна анімація */
+    font-family: "Pridi", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.marquee__inner {
+    width: 100%;
+    height: calc(100% / 3);
+    display: flex;
+    overflow: hidden;
+    transform: rotate(16deg);
+}
+
+.marquee__line {
+    flex-shrink: 0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Анімація для безперервного руху */
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* Зміщення на 50%, щоб показати другу половину */
+    }
+}
