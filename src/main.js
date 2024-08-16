@@ -1,3 +1,4 @@
+import 'lazysizes';
 import './js/refs.js';
 import './js/portfolio-api.js';
 import './js/header.js';
