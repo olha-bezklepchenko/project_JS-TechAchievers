@@ -1,63 +1,106 @@
-body {
-    margin: 0;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 .content {
     position: relative;
-    width: 375px;
-    height: 508px;
-    overflow: hidden;
-    background-image: url(/src/img/covers/elements_vectors.png);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cover-image {
+    margin: 0 auto;
 }
 
 .marquee {
     position: absolute;
-    width: 200%;
-    /* Подвоєна ширина для дублювання контенту */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    animation: marquee 10s linear infinite;
-    /* Плавна безперервна анімація */
-    font-family: "Pridi", sans-serif;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
     font-weight: 600;
+    font-size: 34px;
     text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/covers/elements_vectors.png);
+    background-size: cover;
 }
 
-.marquee__inner {
-    width: 100%;
-    height: calc(100% / 3);
+@media screen and (min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+    .marquee {
+        background-image: url(../img/covers/elements_vectors1.png);
+    }
+}
+
+.marquee-inner {
     display: flex;
-    overflow: hidden;
     transform: rotate(16deg);
 }
 
-.marquee__line {
+.marquee-line {
     flex-shrink: 0;
-    margin-right: 10px;
+    margin: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 100%;
-    object-fit: cover;
+    white-space: nowrap;
+    /* width: calc(100% / 10); */
+    animation-name: marqueeLine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
 }
 
-/* Анімація для безперервного руху */
-@keyframes marquee {
+@keyframes marqueeLine {
     from {
-        transform: translateX(0%);
+        transform: translateX(-20%);
     }
 
     to {
-        transform: translateX(-50%);
-        /* Зміщення на 50%, щоб показати другу половину */
+        transform: translateX(-180%);
     }
+}
+
+@media screen and (max-width: 375px) {
+    .marquee {
+        width: 100%;
+        height: auto;
+    }
+
+    .marquee-line {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .marquee {
+        width: 375px;
+        height: 508px;
+    }
+
+    .marquee-line {
+        width: 282px;
+        height: 162px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .marquee {
+        width: 768px;
+        height: 960px;
+    }
+
+    .marquee-line {
+        width: 544px;
+        height: 314px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .marquee {
+        width: 1440px;
+        height: 960px;
+    }
+
 }
