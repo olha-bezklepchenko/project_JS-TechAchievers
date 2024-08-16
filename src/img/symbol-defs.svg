@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
   <defs>
-    <symbol id="icon-acord-close" viewBox="0 0 32 32">
+      <symbol id="icon-acord-close" viewBox="0 0 32 32">
       <path stroke-width="3.2" d="m24 20-8-8-8 8"/>
     </symbol>
     <symbol id="icon-acord-open" viewBox="0 0 32 32">
@@ -31,5 +31,11 @@
     <symbol id="icon-cross" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16"/>
     </symbol>
-  </defs>
+    
+    <symbol id="icon-menu-05" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.286" d="M4 11.333h24M4 20.667h24"/>
+    </symbol>
+    <symbol id="icon-menu-close-btn-min" viewBox="0 0 32 32">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16"/>
+    </symbol>
 </svg>
