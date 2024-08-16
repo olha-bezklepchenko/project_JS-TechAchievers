@@ -1,4 +1,4 @@
-import 'lazysizes';
+import './js/libraries.js';
 import './js/refs.js';
 import './js/portfolio-api.js';
 import './js/header.js';
