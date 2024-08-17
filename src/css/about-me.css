@@ -6,7 +6,7 @@
 
 .about-text-container {
     border-radius: 24px;
-    height: 436px;
+    height: 500px;
     background: #242527;
     margin-bottom: 16px;
     padding: 32px;
@@ -140,7 +140,7 @@ color: #fafafa;
 }
 
 .about-text-container{
-    height: 572px;
+    height: 700px;
     padding: 64px;
 }
 
@@ -205,7 +205,7 @@ font-size: 20px;
     margin-bottom: 96px;
 }
 .about-text-container {
-    width: 552px;
+    width: 680px;
 }
 .about-ac-panel{
     padding-left: 696px;
