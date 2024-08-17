@@ -1,152 +1,115 @@
-.container {
-  max-width: 343px;
+.hero {
+}
+.hero {
+  margin-bottom: 32px;
+}
+
+.hero-container {
   background-image: url(../img/hero/hero-bg-red-mob.png);
   background-size: cover;
   background-position: center center;
-}
-.hero-container {
-  height: 748px;
+  height: 812px;
+  padding: 281px 16px 32px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: url(../img/hero/hero-bg-red-mob-2x.png);
+  }
+}
+.hero-content {
+
 }
 .hero-title {
-  margin-top: 268px;
   font-weight: 500;
   font-size: 50px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
+  margin-top: 212px;
 }
 .hero-social {
   display: flex;
-  gap: 4px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
-  margin-bottom: 8px;
-  margin-top: 8px;
 }
-
-.hero-link-ig {
+.hero-social-list {
+  display: flex;
+  gap: 4px;
+}
+.hero-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px 12px;
-  width: 37px;
   height: 37px;
-}
-.hero-link-fb {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px;
   width: 37px;
-  height: 37px;
 }
-.hero-link-yt {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 11px;
-  width: 37px;
-  height: 37px;
-}
-.hero-link-gh {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 8px;
-  width: 37px;
-  height: 37px;
-}
-.hero-link-mail {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 12px;
+.hero-social-item:last-child {
   width: 178px;
-  height: 37px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 704px;
-    background-image: url(../img/hero/hero-bg-red-tablet.png);
+  .hero-container {
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .hero-container {
-    height: 960px;
-  }
-  .hero-title {
-    margin-top: 287px;
-    max-width: 632px;
-    font-size: 90px;
-    color: #fafafa;
-  }
-  .hero-social {
-    font-size: 16px;
-    gap: 8px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    justify-content: flex-end;
-  }
-  .hero-link-ig {
-    border-radius: 60px;
-    padding: 18px 20px;
-    width: 55px;
-    height: 55px;
-  }
-  .hero-link-fb {
-    border-radius: 60px;
-    padding: 18px 17px;
-    width: 53px;
-    height: 55px;
-  }
-  .hero-link-yt {
-    border-radius: 60px;
-    padding: 18px;
-    width: 55px;
-    height: 55px;
+    background-image: url(../img/hero/hero-bg-red-tablet.png);
+    height: 1024px;
   }
 
-  .hero-link-gh {
-    border-radius: 60px;
-    padding: 18px 16px;
-    width: 55px;
-    height: 55px;
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: url(../img/hero/hero-bg-red-tablet-2x.png);
   }
-  .hero-link-mail {
-    border-radius: 60px;
-    padding: 18px 24px;
-    width: 223px;
-    height: 55px;
-  }
+}
+.hero-title {
+  font-size: 90px;
+  width: 632px;
+}
+.hero-social {
+  font-size: 16px;
+  justify-content: flex-end;
+}
+.hero-social-item {
+  height: 55px;
+  width: 55px;
+}
+.hero-social-item:last-child {
+  width: 223px;
+}
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1376px;
-    background-image: url(../img/hero/hero-bg-red-desktop.png);
-  }
   .hero-container {
-    height: 836px;
+    background-image: url(../img/hero/hero-bg-red-desktop.png);
+    height: 900px;
   }
-  .title {
-    display: flex;
-    justify-content: center;
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-container {
+    background-image: url(../img/hero/hero-bg-red-desktop-2x.png);
   }
-  .hero-title {
-    margin-top: 300px;
-    max-width: 1084px;
-  }
-  .hero-social {
-  }
-  .hero-link-ig {
-  }
-  .hero-link-fb {
-  }
-  .hero-link-yt {
-  }
-  .hero-link-gh {
-  }
-  .hero-link-mail {
-  }
+}
+.hero-content{
+display: flex;
+justify-content: center;
+}
+.hero-title {
+  width: 1084px;
+}
 }
