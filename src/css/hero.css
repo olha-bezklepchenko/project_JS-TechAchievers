@@ -61,6 +61,25 @@
   width: 178px;
 }
 
+@media screen and (max-width: 320px) {
+  .hero-social-list {
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+
+  .hero-social-item {
+    height: 30px;
+    width: 30px;
+  }
+
+  .hero-social-item:last-child {
+    width: auto;
+    max-width: 140px;
+    font-size: 13px;
+    padding: 0 8px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero-container {
     height: 1024px;
