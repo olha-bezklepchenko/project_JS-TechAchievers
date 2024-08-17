@@ -1,11 +1,15 @@
-.content {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
+.covers .container {
+    padding: 0;
 }
 
-.cover-image {
-    margin: 0 auto;
+.covers {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
 }
 
 .marquee {
@@ -84,6 +88,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .covers {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
 
     .marquee {
         width: 768px;
@@ -97,6 +105,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+    .covers {
+        margin-top: 82px;
+        margin-bottom: 82px;
+    }
 
     .marquee {
         width: 1440px;
