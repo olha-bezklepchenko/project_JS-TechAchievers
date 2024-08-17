@@ -20,25 +20,38 @@
               </li>
             </ul>
             <h3 class="project-name">
-              Programming Across <br>Borders: Ideas, <br>Technologies, Innovations
+              Programming Across <br />Borders: Ideas, <br />Technologies,
+              Innovations
             </h3>
             <a
               href="https://github.com/olha-bezklepchenko/project_JS-TechAchievers"
               class="project-button-link red-accent"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               >See project</a
             >
           </div>
           <div class="project-visual">
-            <img
-              class="project-visual-pic responsive-img"
-              srcset="
-                ./img/project-pics/pr-1-desc.jpg 1x,
-                ./img/project-pics/pr-1-desc@2x.jpg 2x
-              "
-              src="./img/project-pics/pr-1-desc.jpg"
-              alt="Project 1"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/project-pics/proj1-tab.jpg    1x,
+                  ./img/project-pics/proj1-tab@2x.jpg 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/project-pics/proj1-mob.jpg    1x,
+                  ./img/project-pics/proj1-mob@2x.jpg,
+                  2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img class="project-visual-pic"
+              src="./img/project-pics/proj1-mob.jpg 1x" alt="Project 1"
+              loading="lazy" width: 311px; height: 195px; />
+            </picture>
           </div>
         </li>
       </ul>

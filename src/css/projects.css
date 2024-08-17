@@ -74,11 +74,6 @@
   border-radius: 0px 0px 24px 24px;
 }
 
-responsive-img{
-  width: 100%; 
-  height: auto;
-}
-
 .project-slide-2 {
 }
 
@@ -121,7 +116,7 @@ responsive-img{
   transform: scale(1.2);
 }
 
-.projects-btn:disabled .reviews-btn-icon {
+.projects-btn:disabled .projects-btn-icon {
   stroke: #3b3b3b;
 }
 
