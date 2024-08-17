@@ -12,7 +12,6 @@
   padding: 32px 24px;
   flex-basis: 100%;
   flex-shrink: 0;
-  min-height: 350px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
 }
@@ -69,11 +68,6 @@
 
 .reviews-btn:disabled .reviews-btn-icon {
   stroke: #3b3b3b;
-}
-
-.item-message {
-  margin: 0 auto;
-  font-size: 40px;
 }
 
 /* Tablet */
