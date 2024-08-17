@@ -97,14 +97,12 @@ border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 
 .skills-container{
 display: flex;
-overflow: hidden;
 }
 
 .about-skills{
 display: flex;
 position: absolute;
 z-index: 1;
-overflow: hidden;
 }
 
 .about-sk-text{
@@ -206,6 +204,7 @@ font-size: 20px;
 }
 .about-text-container {
     width: 680px;
+    margin-bottom: 0px;
 }
 .about-ac-panel{
     padding-left: 696px;
