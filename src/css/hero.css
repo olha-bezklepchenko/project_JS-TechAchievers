@@ -44,9 +44,12 @@
   letter-spacing: -0.02em;
   color: #fafafa;
 }
+
 .hero-social-list {
   display: flex;
   gap: 4px;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 .hero-social-item {
   display: flex;
@@ -61,24 +64,14 @@
   width: 178px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 375px) {
   .hero-social-list {
-    flex-wrap: wrap; 
-    justify-content: center; 
+   flex-wrap: nowrap; 
   }
 
-  .hero-social-item {
-    height: 30px;
-    width: 30px;
-  }
-
-  .hero-social-item:last-child {
-    width: auto;
-    max-width: 140px;
-    font-size: 13px;
-    padding: 0 8px;
-  }
 }
+
+
 
 @media screen and (min-width: 768px) {
   .hero-container {
