@@ -6,8 +6,6 @@
 .reviews-list {
   margin-bottom: 32px;
   display: flex;
-  gap: 16px;
-  overflow: hidden;
 }
 
 .reviews-list-item {
