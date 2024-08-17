@@ -1,5 +1,5 @@
-import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+// import Swiper from './libraries';
+import { Navigation, Keyboard, Swiper } from './libraries.js';
 
 export const swiper = new Swiper('.swiper', {
   modules: [Navigation, Keyboard],
