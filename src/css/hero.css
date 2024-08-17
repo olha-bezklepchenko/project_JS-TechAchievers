@@ -9,10 +9,10 @@
   background-size: cover;
   background-position: center center;
   height: 812px;
-  padding: 281px 16px 32px 16px;
+  padding: 0 16px 32px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -23,7 +23,10 @@
   }
 }
 .hero-content {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 .hero-title {
   font-weight: 500;
@@ -32,7 +35,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  margin-top: 212px;
+  margin: 0;
 }
 .hero-social {
   display: flex;
@@ -60,36 +63,39 @@
 
 @media screen and (min-width: 768px) {
   .hero-container {
+    height: 1024px;
     padding-left: 32px;
     padding-right: 32px;
   }
   .hero-container {
     background-image: url(../img/hero/hero-bg-red-tablet.png);
-    height: 1024px;
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx),
-  (min-resolution: 192dpi) {
-  .hero-container {
-    background-image: url(../img/hero/hero-bg-red-tablet-2x.png);
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-container {
+      background-image: url(../img/hero/hero-bg-red-tablet-2x.png);
+    }
   }
-}
-.hero-title {
-  font-size: 90px;
-  width: 632px;
-}
-.hero-social {
-  font-size: 16px;
-  justify-content: flex-end;
-}
-.hero-social-item {
-  height: 55px;
-  width: 55px;
-}
-.hero-social-item:last-child {
-  width: 223px;
-}
+  .hero-title {
+    font-size: 90px;
+    width: 632px;
+  }
+  .hero-social {
+    font-size: 16px;
+    justify-content: flex-end;
+  }
+  .hero-social-list {
+    gap: 8px;
+  }
+  .hero-social-item {
+    height: 55px;
+    width: 55px;
+  }
+  .hero-social-item:last-child {
+    width: 223px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -99,17 +105,17 @@
   }
 
   @media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx),
-  (min-resolution: 192dpi) {
-  .hero-container {
-    background-image: url(../img/hero/hero-bg-red-desktop-2x.png);
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-container {
+      background-image: url(../img/hero/hero-bg-red-desktop-2x.png);
+    }
   }
-}
-.hero-content{
-display: flex;
-justify-content: center;
-}
-.hero-title {
-  width: 1084px;
-}
+  .hero-content {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-title {
+    width: 1084px;
+  }
 }
