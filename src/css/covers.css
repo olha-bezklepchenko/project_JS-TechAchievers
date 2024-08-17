@@ -2,18 +2,11 @@
     padding: 0;
 }
 
-.covers {
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-
 .content {
-    position: relative;
     width: 100%;
 }
 
 .marquee {
-    position: absolute;
     right: -800px;
     left: 0;
     overflow: hidden;
@@ -45,11 +38,11 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    /* width: calc(100% / 10); */
     animation-name: marqueeLine;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    animation-play-state: paused;
 
 }
 
@@ -88,10 +81,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .covers {
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
 
     .marquee {
         width: 768px;
@@ -105,10 +94,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .covers {
-        margin-top: 82px;
-        margin-bottom: 82px;
-    }
 
     .marquee {
         width: 1440px;
