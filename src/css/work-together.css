@@ -285,9 +285,9 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .footer-container::before {
-    right: -50px;
+    right: -55px;
     width: 180px;
-    height: 425px;
+    height: 420px;
 
     background-image: image-set(
       url('../img/work-together/work-together-2-tab@1x.png') 1x,
@@ -356,7 +356,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
     padding: 0 180px;
   }
   .footer-container::before {
-    right: -90px;
+    right: 45px;
     width: 420px;
     height: 415px;
 
