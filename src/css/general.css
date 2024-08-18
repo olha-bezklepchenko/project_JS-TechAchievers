@@ -11,8 +11,8 @@ body {
 }
 
 .section {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .container {
@@ -50,32 +50,6 @@ body {
   background-color: #e0373f;
 }
 
-.blue-accent {
-  background-color: #0041e8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.blue-accent {
-  background-color: #1744b6;
-}
-
-.green-accent {
-  background-color: #c6e327;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.green-accent:hover {
-  background-color: #aac02e;
-}
-
-.orange-accent {
-  background-color: #ff7f08;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.orange-accent:hover {
-  background-color: #e9780e;
-}
-
 @media screen and (min-width: 375px) {
   .container {
     width: 375px;
@@ -84,8 +58,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .section {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .container {
@@ -97,8 +71,8 @@ body {
 
 @media screen and (min-width: 1440px) {
   .section {
-    margin-top: 82px;
-    margin-bottom: 82px;
+    padding-top: 82px;
+    padding-bottom: 82px;
   }
 
   .container {

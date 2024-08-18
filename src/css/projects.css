@@ -3,12 +3,19 @@
   margin-top: 32px;
   margin-bottom: 32px;
 }
+
+/* сховала зайві слайди на екрані */
 .project-swiper-container {
+  overflow: hidden;
 }
+
 .project-swiper-wrapper {
   margin-bottom: 32px;
+  display: flex;
 }
+
 .project-swiper-slide {
+  min-width: 100%;
 }
 
 .project-info {
@@ -19,7 +26,6 @@
 
 .project-tag-list {
   margin-bottom: 96px;
-  
 
   display: flex;
   width: 100%;
@@ -74,12 +80,6 @@
   border-radius: 0px 0px 24px 24px;
 }
 
-.project-slide-2 {
-}
-
-.project-slide-3 {
-}
-
 .projects-btn-wrapper {
   display: flex;
   justify-content: center;
@@ -127,30 +127,31 @@
   }
 
   .project-info {
-padding: 64px;
-}
+    padding: 64px;
+  }
 
-.project-tag-list{
-  margin-bottom: 164px;
-}
+  .project-tag-list {
+    margin-bottom: 164px;
+  }
 
-.project-tag-item{
-  padding-top: 18px;
-  іpadding-bottom: 18px;}
+  .project-tag-item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 
-.project-name{
-  font-size: 44px;
-  line-height: 100%;
-  letter-spacing: -1.32px; 
-}
+  .project-name {
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: -1.32px;
+  }
 
-.project-button-link{
-  padding: 18px 50px;
-}
+  .project-button-link {
+    padding: 18px 50px;
+  }
 
-.project-visual{
-  padding: 120px 45px;
-}
+  .project-visual {
+    padding: 120px 45px;
+  }
 
   .projects-btn-wrapper {
     gap: 20px;
@@ -169,20 +170,19 @@ padding: 64px;
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-
   .project-swiper-slide {
     display: flex;
   }
-  .project-info{
+  .project-info {
     width: 688px;
     border-radius: 24px 0px 0px 24px;
   }
 
-  .project-tag-list{
+  .project-tag-list {
     margin-bottom: 223px;
   }
 
-  .project-visual{
+  .project-visual {
     padding-right: 37px;
     padding-left: 37px;
     border-radius: 0px 24px 24px 0px;
