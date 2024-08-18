@@ -8,7 +8,7 @@ import {
 } from './libraries.js';
 import { refs } from './refs.js';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.reviews-swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
   direction: 'horizontal',
   watchOverflow: false,
