@@ -66,18 +66,40 @@ color: #ED3B44
     margin-bottom: 20px;
 }
 
-.about-accordion-item{
+/* .about-accordion-item{
     margin-top: 20px;
-}
-.about-accordion-item:first-child {
+} */
+/* .about-accordion-item:first-child {
     margin-top: 0px;
-}
+} */
 .about-ac-panel{
 border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
 .about-accordion-container{
     margin-bottom: 32px;
+}
+
+.ac .ac-trigger::after {
+    content: "-";
+}
+
+.accordion-container>.ac{
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.accordion-container>.ac:first-child {
+    margin-top: 0px;
+}
+
+.about-ac-svg {
+    transition: transform .5s;
+}
+
+.is-active>.about-ac-svg {
+    transform: rotate(90deg);
 }
 
 .container .skills-container .about-skills {
@@ -172,7 +194,7 @@ cursor: pointer;
     height: 40px;
 }
 
-.about-accordion-header {
+.accordion-container>.about-accordion-item>.about-accordion-header {
     margin-bottom: 8px;
 }
 
@@ -191,6 +213,7 @@ cursor: pointer;
 .about-accordion-container {
     margin-bottom: 64px;
 }
+
 
 .container .skills-container .about-skills { 
     width: 600px;
