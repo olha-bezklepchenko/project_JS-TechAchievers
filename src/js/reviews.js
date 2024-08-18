@@ -1,8 +1,15 @@
-import { Navigation, Keyboard, Swiper, axios, iziToast } from './libraries.js';
+import {
+  Navigation,
+  Keyboard,
+  Mousewheel,
+  Swiper,
+  axios,
+  iziToast,
+} from './libraries.js';
 import { refs } from './refs.js';
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard, Mousewheel],
   direction: 'horizontal',
   watchOverflow: false,
   speed: 700,
@@ -17,6 +24,11 @@ const swiper = new Swiper('.swiper', {
     1440: {
       slidesPerView: 4,
     },
+  },
+
+  mousewheel: {
+    enabled: true,
+    invert: true,
   },
 
   keyboard: {
