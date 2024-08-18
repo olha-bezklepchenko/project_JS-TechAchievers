@@ -9,6 +9,8 @@ import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/mousewheel;';
+import 'swiper/css/keyboard';
+
 
 //Accordion
 import Accordion from 'accordion-js';
