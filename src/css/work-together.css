@@ -4,7 +4,6 @@
 .footer-container {
   position: relative;
   z-index: 1;
-  padding: 0 180px;
 }
 .footer-container::before {
   content: '';
@@ -355,6 +354,9 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
+  .footer-container {
+    padding: 0 180px;
+  }
   .footer-container::before {
     right: 45px;
     width: 420px;
