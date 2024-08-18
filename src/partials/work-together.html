@@ -1,0 +1,83 @@
+<footer class="footer section" id="work-together">
+  <div class="container footer-container">
+    <h2 class="work-tgt-title">
+      <span
+        ><img
+          class="work-tgt-img"
+          srcset="
+            ../img/work-together/work-togrther@1x.jpg 1x,
+            ../img/work-together/work-togrther@2x.jpg 2x
+          "
+          src="../img/work-together/work-togrther@1x.jpg"
+          alt="Lloyd Jefferson"
+          width="70"
+          height="70"
+          loading="lazy" /></span
+      >LET&apos;S <span class="work-tgt-span">WORK</span> TOGETHER
+    </h2>
+    <div class="work-tgt-form-wrap">
+      <form class="work-tgt-form">
+        <label class="work-tgt-form-label">
+          <input
+            type="email"
+            class="work-tgt-form-input"
+            name="email"
+            placeholder="clients@gmail.com"
+            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            required
+          />
+          <div class="feedback">
+            <div class="valid-feedback">Success!</div>
+            <div class="invalid-feedback">Invalid email, try again</div>
+          </div>
+        </label>
+        <label class="work-tgt-form-label-textarea">
+          <input
+            type="text"
+            class="work-tgt-form-input"
+            name="comment"
+            placeholder="comments"
+            required
+          />
+        </label>
+        <button type="submit" class="work-tgt-form-btn button" data-send>
+          Send
+        </button>
+      </form>
+    </div>
+    <div class="work-tgt-address-wrap">
+      <address class="work-tgt-contacts">
+        <ul class="work-tgt-contacts-list list">
+          <li class="work-tgt-contacts-item mail">
+            <a
+              href="mailto:lloydjefferson@gmail.com"
+              class="work-tgt-contacts-mail link"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="work-tgt-contacts-item">
+            <a href="tel:+3801111111111" class="contacts-tel link"
+              >+380 11 1111 11 11</a
+            >
+          </li>
+        </ul>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="close-button" data-modal-close>
+      <svg class="modal-icon">
+        <use href="../img/symbol-defs.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h2 class="modal-title">Thank you for your interest in cooperation!</h2>
+    <p class="modal-text">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
+  </div>
+</div>
