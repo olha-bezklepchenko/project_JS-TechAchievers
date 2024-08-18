@@ -1,25 +1,18 @@
-import Swiper from 'swiper';
-import {
-    Navigation,
-    Keyboard,
-} from 'swiper/modules';
-
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
+import { Swiper, Navigation, Keyboard, Accordion } from './libraries.js';
 
 const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard],
     direction: 'horizontal',
     loop: true,
-    hashNavigation: true,
+    // hashNavigation: true,
     keyboard: {
     enabled: true,
     onlyInViewport: false,
     },
     ousewheel: {
-        forceToAxis: true,
+      forceToAxis: true,
     },
-    //  slideActiveClass,
+  
     watchOverflow: false,
 
   breakpoints: {

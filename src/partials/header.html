@@ -1,1 +1,98 @@
-<header class="header"></header>
+<script
+  defer
+  src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+  crossorigin="anonymous"
+></script>`
+
+<header id="header" class="header">
+    <div class="header-box">
+      <div class="header-wrap container">
+        <div class="header-logo">
+          <a href="./index.html">
+            <img
+              class="header-logo-image"
+              srcset="./img/header/header-logo@1x.jpg 1x,
+                ./img/header/header-logo@2x.jpg 2x
+              "
+              src="./img/header/header-logo@1x.jpg"
+              alt="Lloyd Jefferson"
+              width="80"
+              height="80"
+              loading="lazy"
+            />
+          </a>
+  
+          <a href="./index.html" class="header-logo-text">jefferson&#42;</a>
+        </div>
+        <div class="dropdown">
+          <button class="dropdown-toggle js-dropdown-toggle" type="button">
+            Menu
+          </button>
+          <ul class="dropdown-menu js-dropdown-menu">
+            <li>
+              <a class="header-menu-link js-header-menu-link" href="#about"
+                >About me</a
+              >
+            </li>
+            <li>
+              <a class="header-menu-link js-header-menu-link" href="#benefits"
+                >Benefits</a
+              >
+            </li>
+            <li>
+              <a class="header-menu-link js-header-menu-link" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a class="header-menu-link js-header-menu-link" href="#faq"
+              >FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <a href="#footer" class="header-order-btn">Order the project</a>
+        </div>
+        <button
+          class="header-btn js-open-menu"
+          type="button"
+        >
+          <svg class="header-btn-open" width="28" height="28">
+            <use href="./img/symbol-defs.svg#icon-menu-05"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="backdrop js-menu-container" id="mobile-menu">
+        <div class="mob-wrap">
+          <button
+            class="mob-btn-close js-close-menu"
+            type="button"
+          >
+            <svg class="btn-close" width="28" height="28">
+              <use href="./img/symbol-defs.svg#icon-menu-close-btn-min"></use>
+            </svg>
+          </button>
+          <nav class="mob-menu">
+            <ul class="mob-list">
+              <li class="mob-item">
+                <a href="" class="mob-link js-header-link">About me</a>
+              </li>
+              <li class="mob-item">
+                <a href="" class="mob-link js-header-link">Benefits</a>
+              </li>
+              <li class="mob-item">
+                <a href="" class="mob-link js-header-link">Projects</a>
+              </li>
+              <li class="mob-item">
+                <a href="" class="mob-link js-header-link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="modal-btn-order js-header-link"
+            >Order the project</a
+          >
+        </div>
+      </div>
+  </header>
