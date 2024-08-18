@@ -80,6 +80,11 @@
   border-radius: 0px 0px 24px 24px;
 }
 
+.swiper-slide.project-swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+
 .projects-btn-wrapper {
   display: flex;
   justify-content: center;
@@ -171,7 +176,6 @@
 /* Desktop */
 @media screen and (min-width: 1440px) {
   .swiper-slide.project-swiper-slide {
-    display: flex;
     flex-direction: row;
   }
 
