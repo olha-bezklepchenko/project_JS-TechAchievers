@@ -1,8 +1,15 @@
-import { Navigation, Keyboard, Swiper, axios, iziToast } from './libraries.js';
+import {
+  Navigation,
+  Keyboard,
+  Mousewheel,
+  Swiper,
+  axios,
+  iziToast,
+} from './libraries.js';
 import { refs } from './refs.js';
 
 const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Keyboard, Mousewheel],
   direction: 'horizontal',
   watchOverflow: false,
   speed: 700,
@@ -19,6 +26,11 @@ const swiper = new Swiper('.swiper', {
     },
   },
 
+  mousewheel: {
+    enabled: true,
+    invert: true,
+  },
+
   keyboard: {
     enabled: true,
   },
@@ -31,7 +43,7 @@ const swiper = new Swiper('.swiper', {
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/reviews';
 
-async function searchImage() {
+async function searchReviews() {
   try {
     const response = await axios.get();
 
@@ -65,7 +77,7 @@ function renderCards(data) {
 }
 async function loadReviews() {
   try {
-    const response = await searchImage();
+    const response = await searchReviews();
     refs.reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
   } catch (error) {
     console.log(error);
