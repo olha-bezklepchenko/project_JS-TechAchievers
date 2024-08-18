@@ -38,6 +38,7 @@ async function searchImage() {
     return response.data;
   } catch (error) {
     console.log(error);
+    throw error;
   }
 }
 
@@ -62,23 +63,26 @@ function renderCards(data) {
     })
     .join('');
 }
+async function loadReviews() {
+  try {
+    const response = await searchImage();
+    refs.reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
+  } catch (error) {
+    console.log(error);
+    iziToast.error({
+      message: 'Sorry, the server is not responding!',
+      position: 'topRight',
+      backgroundColor: '#ef4040',
+      messageColor: 'white',
+      messageSize: '16',
+      theme: 'dark',
+    });
 
-try {
-  const response = await searchImage();
-  refs.reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
-} catch (error) {
-  console.log(error);
-  iziToast.error({
-    message: 'Sorry, the server is not responding!',
-    position: 'topRight',
-    backgroundColor: '#ef4040',
-    messageColor: 'white',
-    messageSize: '16',
-    theme: 'dark',
-  });
-
-  refs.reviewsList.insertAdjacentHTML(
-    'beforeend',
-    `<li class="item-message"><p>Not Found</p></li>`
-  );
+    refs.reviewsList.insertAdjacentHTML(
+      'beforeend',
+      `<li class="item-message"><p>Not Found</p></li>`
+    );
+  }
 }
+
+loadReviews();
