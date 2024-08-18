@@ -7,7 +7,7 @@
   content: '';
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -15px;
   width: 150px;
   height: 550px;
 
@@ -18,6 +18,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .work-tgt-img {
   border-radius: 12px;
   width: 44px;
@@ -51,7 +52,7 @@
   margin-bottom: 16px;
 }
 .work-tgt-form-input {
-  width: 342px;
+  width: 100%;
   height: 44px;
   padding-bottom: 24px;
 
@@ -158,6 +159,8 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 
 .work-tgt-contacts-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-content: center;
   gap: 4px;
 }
@@ -281,6 +284,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .footer::before {
+    bottom: 0;
     width: 180px;
     height: 485px;
 
@@ -289,6 +293,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
       url('../img/work-together/work-together-2-tab@2x.png') 2x
     );
   }
+
   .work-tgt-img {
     border-radius: 24px;
     width: 70px;
@@ -326,6 +331,9 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
     gap: 8px;
   }
   .work-tgt-contacts-item {
+    display: flex;
+    align-items: center;
+    padding: 18px 32px;
     height: 55px;
     padding: 18px 32px;
     font-size: 16px;
@@ -353,6 +361,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
       url('../img/work-together/work-together-2-desk@2x.png') 2x
     );
   }
+
   .work-tgt-title {
     width: 542px;
   }
@@ -364,5 +373,19 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
   }
   .work-tgt-form-btn {
     margin-left: 52px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .work-tgt-contacts-list {
+    flex-direction: column;
+    align-content: flex-start;
+  }
+  .work-tgt-contacts-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+  }
+  .footer::before {
+    background-image: none;
   }
 }
