@@ -1,10 +1,11 @@
 import Swiper from 'swiper';
 import {
   Navigation,
-  Keyboard,
+    Keyboard,
+    Pagination,
 } from 'swiper/modules';
 
-const swiper = new Swiper('.skills-container', {
+const swiper = new Swiper('.swiper-container', {
     modules: [Navigation, Keyboard],
     direction: 'horizontal',
     loop: true,
@@ -13,7 +14,8 @@ const swiper = new Swiper('.skills-container', {
           onlyInViewport: false,
     },
     //  slideActiveClass,
-  watchOverflow: false,
+    watchOverflow: false,
+
   breakpoints: {
     320: {
       slidesPerView: 2,
