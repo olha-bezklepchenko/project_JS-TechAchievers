@@ -1,9 +1,9 @@
-import { Swiper, Navigation, Keyboard, Mousewheel } from './libraries.js';
+import { Swiper, Navigation, Keyboard } from './libraries.js';
 
 // Створення слайдеру з налаштуванням
 document.addEventListener('DOMContentLoaded', () => {
-  const projectsSwiper = new Swiper('.swiper', {
-    modules: [Navigation, Keyboard, Mousewheel],
+  const projectsSwiper = new Swiper('.project-swiper-container', {
+    modules: [Navigation, Keyboard],
     slidesPerView: 1,
     spaceBetween: 16,
     watchOverflow: false,
@@ -19,12 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     keyboard: {
       enabled: true,
-    },
-
-    mousewheel: {
-      enabled: true,
-      invert: true,
-      sensitivity: 1,
     },
   });
 });
