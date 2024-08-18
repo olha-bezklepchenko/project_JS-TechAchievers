@@ -2,16 +2,19 @@ import Swiper from 'swiper';
 import {
   Navigation,
     Keyboard,
-    Pagination,
 } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard],
     direction: 'horizontal',
     loop: true,
+    hashNavigation: true,
     keyboard: {
           enabled: true,
           onlyInViewport: false,
+    },
+    ousewheel: {
+        forceToAxis: true,
     },
     //  slideActiveClass,
     watchOverflow: false,
