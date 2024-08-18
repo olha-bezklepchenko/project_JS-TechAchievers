@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Swiper
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
@@ -17,4 +17,4 @@ import 'accordion-js/dist/accordion.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-export { axios, Swiper, Navigation, Pagination, Accordion, iziToast };
+export { axios, Swiper, Navigation, Pagination, Keyboard, Accordion, iziToast };
