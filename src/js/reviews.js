@@ -31,7 +31,7 @@ const swiper = new Swiper('.swiper', {
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/reviews';
 
-async function searchImage() {
+async function searchReviews() {
   try {
     const response = await axios.get();
 
@@ -65,7 +65,7 @@ function renderCards(data) {
 }
 async function loadReviews() {
   try {
-    const response = await searchImage();
+    const response = await searchReviews();
     refs.reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
   } catch (error) {
     console.log(error);
