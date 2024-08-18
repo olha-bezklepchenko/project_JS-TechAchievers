@@ -1,8 +1,11 @@
 import Swiper from 'swiper';
 import {
-  Navigation,
+    Navigation,
     Keyboard,
 } from 'swiper/modules';
+
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard],
@@ -10,8 +13,8 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     hashNavigation: true,
     keyboard: {
-          enabled: true,
-          onlyInViewport: false,
+    enabled: true,
+    onlyInViewport: false,
     },
     ousewheel: {
         forceToAxis: true,
@@ -35,3 +38,5 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.about-btn-next',
   },
 });
+
+new Accordion('.accordion-container');
