@@ -4,6 +4,7 @@
 .footer-container {
   position: relative;
   z-index: 1;
+  padding: 0 180px;
 }
 .footer-container::before {
   content: '';
