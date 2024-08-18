@@ -1,15 +1,18 @@
-.footer-container {
+.footer {
   margin: 0 auto;
+}
+.footer-container {
   position: relative;
   z-index: 1;
 }
-.footer::before {
+.footer-container::before {
   content: '';
   position: absolute;
   right: 0;
-  bottom: -15px;
+  bottom: 0;
   width: 150px;
-  height: 550px;
+  height: 540px;
+  z-index: -1;
 
   background-image: image-set(
     url('../img/work-together/work-together-2-mob@1x.png') 1x,
@@ -283,10 +286,10 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 }
 /* Tablet */
 @media screen and (min-width: 768px) {
-  .footer::before {
-    bottom: 0;
+  .footer-container::before {
+    right: -55px;
     width: 180px;
-    height: 485px;
+    height: 420px;
 
     background-image: image-set(
       url('../img/work-together/work-together-2-tab@1x.png') 1x,
@@ -351,8 +354,8 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-  .footer::before {
-    bottom: 0;
+  .footer-container::before {
+    right: 45px;
     width: 420px;
     height: 415px;
 
