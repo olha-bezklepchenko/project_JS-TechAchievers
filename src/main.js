@@ -9,4 +9,4 @@ import './js/covers.js';
 import './js/modal-window.js';
 import './js/reviews.js';
 import './js/work-together.js';
-import './js/thems.js';
+import './js/fast-scroll.js';
