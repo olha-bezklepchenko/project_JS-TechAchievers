@@ -4,7 +4,6 @@
 .footer-container {
   position: relative;
   z-index: 1;
-  padding: 0 180px;
 }
 .footer-container::before {
   content: '';
@@ -81,36 +80,66 @@
   border-right: #1c1d20;
   border-bottom-color: #fafafa;
 }
-.feedback {
-  position: relative;
-  height: 20px;
-  margin-top: 10px;
+.work-tgt-form-text {
+  width: 100%;
+  height: 44px;
+  padding-bottom: 24px;
+
+  background-color: #1c1d20;
+  border-top: #1c1d20;
+  border-left: #1c1d20;
+  border-right: #1c1d20;
+  color: #fafafa;
+
+  text-overflow: ellipsis;
+  cursor: auto;
+
+  transition-property: border-color;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-input[type='email']:focus:valid {
-  border-bottom-color: #3cbc81;
+.work-tgt-form-text:hover,
+.work-tgt-form-text:focus {
+  background-color: #1c1d20;
+  border-top: #1c1d20;
+  border-left: #1c1d20;
+  border-right: #1c1d20;
+  border-bottom-color: #fafafa;
 }
 
-input[type='email']:focus:valid ~ .feedback .valid-feedback {
+.work-tgt-form-input.valid {
+  border-bottom-color: #3cbc81;
+  margin-top: 23px;
+}
+
+.work-tgt-form-input.invalid {
+  border-bottom-color: #e74a3b;
+  margin-top: 23px;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.feedback .valid-feedback,
+.feedback .invalid-feedback {
+  display: none;
+  font-size: 14px;
+}
+
+.work-tgt-form-input.valid ~ .feedback .valid-feedback {
+  display: block;
   color: #3cbc81;
 }
 
-input[type='email']:focus:invalid {
-  border-bottom-color: #e74a3b;
-}
-
-input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
+.work-tgt-form-input.invalid ~ .feedback .invalid-feedback {
+  display: block;
   color: #e74a3b;
 }
 
-.valid-feedback,
-.invalid-feedback {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: transparent;
-  transition: color 0.3s ease;
-}
 .work-tgt-form-input::placeholder {
   color: rgba(250, 250, 250, 0.6);
 }
@@ -219,7 +248,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
 }
 .modal {
   position: absolute;
-  top: 50%;
+  top: 73%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
@@ -318,9 +347,12 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
     align-items: center;
   }
   .work-tgt-form-label {
-    margin-top: 47px;
+    margin-top: 23px;
   }
   .work-tgt-form-input {
+    width: 245px;
+  }
+  .work-tgt-form-text {
     width: 245px;
   }
   .work-tgt-form-label-textarea {
@@ -346,6 +378,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
     width: 492px;
     height: 246px;
     padding: 64px;
+    top: 80%;
   }
   .modal-icon {
     width: 24px;
@@ -359,7 +392,7 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
     padding: 0 180px;
   }
   .footer-container::before {
-    right: 45px;
+    right: -90px;
     width: 420px;
     height: 415px;
 
@@ -375,11 +408,17 @@ input[type='email']:focus:invalid ~ .feedback .invalid-feedback {
   .work-tgt-form-input {
     width: 390px;
   }
+  .work-tgt-form-text {
+    width: 390px;
+  }
   .work-tgt-form-textarea {
     width: 390px;
   }
   .work-tgt-form-btn {
     margin-left: 52px;
+  }
+  .modal {
+    top: 76%;
   }
 }
 @media screen and (max-width: 320px) {
