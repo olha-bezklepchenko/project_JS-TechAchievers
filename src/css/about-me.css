@@ -1,0 +1,280 @@
+/* SECTION ABOUT_ME */
+
+.about-section {
+    margin-bottom: 36px;
+}
+
+.about-text-container {
+    border-radius: 24px;
+    height: 500px;
+    background: #242527;
+    margin-bottom: 16px;
+    padding: 32px;
+}
+
+.about-content {
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.about-accent-word{
+color: #ED3B44
+}
+
+.about-word {
+    color: rgba(250, 250, 250, 0.4);
+}
+
+.about-img {
+    border-radius: 24px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about-ac-svg{
+    stroke: #FAFAFA;
+}
+
+.ac .ac-trigger{
+    width: 0 !important;
+    color: transparent !important;
+    border: 1px solid rgba(250, 250, 250, 0.2) !important;
+        border-radius: 100px !important;
+        padding: 9px !important;
+        width: 36px !important;
+        height: 36px !important;
+        align-items: center;
+        justify-content: center;
+}
+
+.about-accordion-btn:focus,
+.about-accordion-btn:hover {
+    border-color: rgba(250, 250, 250, 1);
+}
+
+.about-accordion-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.about-ac-text{
+    margin-bottom: 32px;
+    color: #fafafa; 
+}
+
+.about-ac-text:last-child{
+    margin-bottom: 20px;
+}
+
+.about-accordion-item{
+    margin-top: 20px;
+}
+.about-accordion-item:first-child {
+    margin-top: 0px;
+}
+.about-ac-panel{
+border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.about-accordion-container{
+    margin-bottom: 32px;
+}
+
+.ac .ac-trigger::after {
+    content: none;
+}
+
+.ac {
+    margin-top: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.about-skills {
+display: flex;
+width: 260px !important;
+/* overflow: hidden; */
+position: absolute;
+z-index: 999;
+}
+
+.about-sk-item {
+display: flex !important;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+width: 130px !important;
+height: 130px !important;
+}
+
+.skills-container{
+display: flex !important;
+align-items: center;
+justify-content: space-between;
+}
+
+.about-sk-btn{
+border: 1px solid rgba(250, 250, 250, 0.2);
+border-radius: 50%;
+width: 130px !important;
+height: 130px !important;
+background-color: #1c1d20;
+padding: 0;
+color: #fafafa;
+cursor: pointer;
+}
+
+.about-sk-btn:focus{
+    background-color: #ED3B44;
+}
+
+.about-btn-next{
+    border: none;  
+    background: transparent;
+    padding: 0;
+}
+
+.about-swipper-btn-svg{
+    stroke:#3b3b3b;;
+    fill: none;
+}
+
+.about-skills {
+    border: 1px solid #ED3B44;
+}
+
+.swiper-slide-active>.about-sk-btn{
+    background-color: #ED3B44;
+}
+
+
+
+
+@media screen and (min-width: 375px) {
+    .container{
+    width: 343px;
+    } 
+}
+
+@media screen and (min-width: 768px) {
+
+.container{
+    width: 704px;
+    }
+
+.about-section {
+    margin-bottom: 64px;
+}
+
+.about-text-container{
+    height: 700px;
+    padding: 64px;
+}
+
+.about-content{
+    font-size: 38px;
+    line-height: 1.05263;
+}
+
+.about-img {  
+    height: 700px;
+}
+
+.about-ac-svg {
+    width: 20px;
+    height: 20px;
+}
+
+.about-accordion-btn{
+    width: 40px;
+    height: 40px;
+}
+
+.about-accordion-header {
+    margin-bottom: 8px;
+}
+
+.about-ac-text {
+    margin-bottom: 16px;
+}
+
+.about-ac-text:last-child {
+    margin-bottom: 32px;
+}
+
+.about-accordion-item{
+    margin-top: 32px;
+}
+
+.about-accordion-container {
+    margin-bottom: 64px;
+}
+
+.about-skills { 
+    width: 600px !important;
+}
+
+.about-sk-item {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.about-sk-btn {
+font-size: 20px;   
+border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 50%;
+    width: 200px !important;
+    height: 200px !important;
+    background-color: #1c1d20;
+    padding: 0;
+}
+
+.about-swipper-btn-svg{
+    width: 40px;
+    height: 40px;
+}
+
+.ac .ac-trigger {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+.container {
+    width: 1376px;
+}
+
+.about-section{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 96px;
+}
+.about-text-container {
+    width: 680px;
+    margin-bottom: 0px;
+}
+.about-ac-panel{
+    padding-left: 696px;
+    padding-right: 68px;
+}
+.about-ac-text {
+    margin-bottom: 32px;
+}
+
+.about-accordion-container {
+    margin-bottom: 96px;
+}
+
+.skills-container{
+    padding: 0 32px;
+}
+
+.about-skills {
+    width: 1200px !important;
+}
+}
