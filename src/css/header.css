@@ -4,7 +4,7 @@
   max-width: 1440px;
   width: 100%;
   height: 100%;
-  top: 32px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   right: 0; 
@@ -193,11 +193,12 @@
   }
   
   .mob-wrap {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 0;
     right: 0;
-    min-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     background-image: linear-gradient(
         rgba(255, 255, 255, 0),
         rgba(59, 59, 59, 0.2),
@@ -210,11 +211,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 320px 60px 78px 60px;
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-behavior: smooth;
   } 
+
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
