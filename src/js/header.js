@@ -1,3 +1,10 @@
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from './libraries.js';
+
+
 const menuToggle = document.querySelector('.js-dropdown-toggle');
 const menuDropdown = document.querySelector('.js-dropdown-menu');
 const menuLink = document.querySelectorAll('.js-header-menu-link');
