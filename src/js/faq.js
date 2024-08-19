@@ -1,41 +1,27 @@
 import { Accordion } from './libraries';
 
-const initializeAccordion = () => {
-  const faqList = document.querySelector('.faq-list');
+new Accordion(document.querySelector('.faq-list'), {
+  duration: 200,
+  showMultiple: true,
+  elementClass: 'faq-item',
+  panelClass: 'faq-panel',
+  triggerClass: 'faq-trigger',
+  activeClass: 'faq-active',
+  onOpen: onOpen,
+  onClose: onClose,
+});
 
-  const accordion = new Accordion(faqList, {
-    duration: 250,
-    showMultiple: false,
-    elementClass: 'faq-item',
-    triggerClass: 'faq-btn',
-    panelClass: 'faq-text',
-    activeClass: 'active',
-  });
+function rotateArrow(element, degrees) {
+  const arrow = element.querySelector('.faq-btn-open');
+  if (arrow) {
+    arrow.style.transform = `rotate(${degrees}deg)`;
+  }
+}
 
-  accordion.open(0);
+function onOpen(currentElement) {
+  rotateArrow(currentElement, 180);
+}
 
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach((currentItem, currentIndex) => {
-    currentItem.addEventListener('click', event => {
-      if (event.target.closest('.faq-btn')) return;
-
-      faqItems.forEach((otherItem, otherIndex) => {
-        if (
-          otherIndex !== currentIndex &&
-          otherItem.classList.contains('active')
-        ) {
-          accordion.close(otherIndex);
-        }
-      });
-
-      if (currentItem.classList.contains('active')) {
-        accordion.close(currentIndex);
-      } else {
-        accordion.open(currentIndex);
-      }
-    });
-  });
-};
-
-export default initializeAccordion;
+function onClose(currentElement) {
+  rotateArrow(currentElement, 0);
+}
