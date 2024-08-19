@@ -38,9 +38,12 @@ sendButton.addEventListener('click', async event => {
 
   if (!emailInput.validity.valid) {
     iziToast.error({
-      title: 'Error',
       message: 'Please enter a valid email address.',
-      position: 'topRight',
+      position: 'bottomRight',
+      backgroundColor: '#ef4040',
+      messageColor: 'white',
+      messageSize: '16',
+      theme: 'dark',
     });
     return;
   }
@@ -50,9 +53,12 @@ sendButton.addEventListener('click', async event => {
 
   if (!comment.trim()) {
     iziToast.error({
-      title: 'Error',
-      message: 'Comment field cannot be empty.',
-      position: 'topRight',
+      message: 'Comments field cannot be empty.',
+      position: 'bottomRight',
+      backgroundColor: '#ef4040',
+      messageColor: 'white',
+      messageSize: '16',
+      theme: 'dark',
     });
     return;
   }
@@ -87,7 +93,11 @@ sendButton.addEventListener('click', async event => {
     iziToast.error({
       title: 'Error',
       message: 'Something went wrong. Please check your input and try again.',
-      position: 'topRight',
+      position: 'bottomRight',
+      backgroundColor: '#ef4040',
+      messageColor: 'white',
+      messageSize: '16',
+      theme: 'dark',
     });
     throw error;
   }
