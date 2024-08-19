@@ -48,8 +48,8 @@
 .hero-social-list {
   display: flex;
   gap: 4px;
-    flex-wrap: wrap; 
-    justify-content: center; 
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .hero-social-item {
   display: flex;
@@ -59,19 +59,22 @@
   border-radius: 60px;
   height: 37px;
   width: 37px;
+  transition: border-color 250ms linear;
 }
 .hero-social-item:last-child {
   width: 178px;
 }
 
-@media screen and (min-width: 375px) {
-  .hero-social-list {
-   flex-wrap: nowrap; 
-  }
-
+.hero-social-item:hover,
+.hero-social-item:focus {
+  border-color: rgba(250, 250, 250, 1);
 }
 
-
+@media screen and (min-width: 375px) {
+  .hero-social-list {
+    flex-wrap: nowrap;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .hero-container {

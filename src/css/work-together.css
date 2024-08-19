@@ -4,6 +4,7 @@
 .footer-container {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .footer-container::before {
   content: '';
@@ -248,7 +249,7 @@
 }
 .modal {
   position: absolute;
-  top: 73%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
@@ -378,7 +379,6 @@
     width: 492px;
     height: 246px;
     padding: 64px;
-    top: 80%;
   }
   .modal-icon {
     width: 24px;
@@ -416,9 +416,6 @@
   }
   .work-tgt-form-btn {
     margin-left: 52px;
-  }
-  .modal {
-    top: 76%;
   }
 }
 @media screen and (max-width: 320px) {

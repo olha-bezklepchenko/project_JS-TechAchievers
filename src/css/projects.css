@@ -5,18 +5,18 @@
 }
 
 /* сховала зайві слайди на екрані */
-.project-swiper-container {
+/* .project-swiper-container {
   overflow: hidden;
-}
+} */
 
 .project-swiper-wrapper {
   margin-bottom: 32px;
   display: flex;
 }
 
-.project-swiper-slide {
+/* .project-swiper-slide {
   min-width: 100%;
-}
+} */
 
 .project-info {
   background: #fafafa;
@@ -78,6 +78,11 @@
   padding: 100px 16px;
   background-color: #242527;
   border-radius: 0px 0px 24px 24px;
+}
+
+.swiper-slide.project-swiper-slide {
+  display: flex;
+  flex-direction: column;
 }
 
 .projects-btn-wrapper {
@@ -170,9 +175,10 @@
 
 /* Desktop */
 @media screen and (min-width: 1440px) {
-  .project-swiper-slide {
-    display: flex;
+  .swiper-slide.project-swiper-slide {
+    flex-direction: row;
   }
+
   .project-info {
     width: 688px;
     border-radius: 24px 0px 0px 24px;
@@ -185,6 +191,7 @@
   .project-visual {
     padding-right: 37px;
     padding-left: 37px;
+    width: 688px;
     border-radius: 0px 24px 24px 0px;
   }
 
