@@ -1,4 +1,25 @@
 /* Reset styles */
+:root {
+  font-family: 'Inter Tight', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: rgba(250, 250, 250, 0.6);
+  background-color: #1c1d20;
+}
+
 h1,
 h2,
 h3,
@@ -22,6 +43,20 @@ ul {
 a {
   color: currentColor;
   text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  border-width: 1px;
+  border-top: #1c1d20;
+  border-left: #1c1d20;
+  border-right: #1c1d20;
+  border-bottom-color: rgba(250, 250, 250, 0.2);
+  box-shadow: none;
+  -webkit-text-fill-color: #fafafa;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input,
