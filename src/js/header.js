@@ -1,7 +1,5 @@
 import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
+ bodyScrollLock
 } from './libraries.js';
 
 
