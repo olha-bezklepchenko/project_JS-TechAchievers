@@ -19,12 +19,15 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 //Body-scroll-lock
+import * as bodyScrollLock from 'body-scroll-lock';
+
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
 
+//exports
 export {
   axios,
   Swiper,
@@ -34,6 +37,7 @@ export {
   Accordion,
   Mousewheel,
   iziToast,
+  bodyScrollLock,
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
