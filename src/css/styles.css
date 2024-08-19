@@ -12,12 +12,3 @@
 @import url('./reviews.css');
 @import url('./work-together.css');
 @import url('./fast-scroll.css');
-
-:root {
-  font-family: 'Inter Tight', sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
