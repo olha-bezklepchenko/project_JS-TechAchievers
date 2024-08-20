@@ -322,6 +322,9 @@
 .modal-form {
   width: 100%;
 }
+.modal-open {
+  overflow: hidden;
+}
 /* Tablet */
 @media screen and (min-width: 768px) {
   .footer-container::before {
