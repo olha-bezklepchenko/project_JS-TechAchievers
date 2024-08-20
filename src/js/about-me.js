@@ -3,21 +3,24 @@ import { Swiper, Navigation, Keyboard, Accordion } from './libraries.js';
 const swiper = new Swiper('.skills-container', {
     modules: [Navigation, Keyboard],
     direction: 'horizontal',
-    rewind: true,
+    loop: true,
     
+    wrapperClass: 'about-skills',
+    slideClass: 'about-sk-item',
+
     keyboard: {
     enabled: true,
     },
   
     breakpoints: {
       320: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1440: {
-        slidesPerView: 6,
+        slidesPerView: 5,
       },
     },
 
@@ -25,6 +28,7 @@ const swiper = new Swiper('.skills-container', {
       nextEl: '.about-btn-next',
     },
 });
+
 
 new Accordion(document.querySelector('.accordion-container'), {
   duration: 200,
