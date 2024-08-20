@@ -1,11 +1,10 @@
 .header {
   position: absolute;
   z-index: 1000;
-  max-width: 1440px;
+  max-width: 767px;
   width: 100%;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   right: 0;
   margin: 0 auto;
 }
@@ -47,6 +46,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    max-width: 1439px;
+  }
   .header-wrap {
     padding: 32px 32px 0px 32px;
   }
@@ -69,7 +71,7 @@
     position: relative;
     letter-spacing: -0.02em;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dropdown-toggle::after {
@@ -106,7 +108,8 @@
     max-height: 0;
     opacity: 0;
     visibility: hidden;
-    transition: max-height 1s ease, opacity 1s ease, visibility 1s;
+    transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1s;
     z-index: 1;
   }
   .dropdown-menu.show {
@@ -120,7 +123,8 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.02em;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      text-decoration 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
   }
 
@@ -151,17 +155,18 @@
     border-radius: 60px;
     background-color: #ed3b44;
     color: #fafafa;
-    font-family: 'Inter Tight';
     max-width: 163px;
-    font-weight: 500;
     font-size: 16px;
     line-height: normal;
     letter-spacing: -0.02em;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .header-order-btn:hover,
   .header-order-btn:focus {
     background-color: #e0373f;
+    transform: scale(0.95);
   }
 
   .header-btn {
@@ -170,6 +175,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .header {
+    width: 1440px;
+  }
 }
 
 /*modal*/
