@@ -5,6 +5,7 @@ const modal = document.querySelector('[data-modal]');
 const closeModalBtn = document.querySelector('[data-modal-close]');
 const sendButton = document.querySelector('[data-send]');
 const emailInput = form.querySelector('input[type="email"]');
+const backdrop = document.querySelector('.backdrop');
 
 const feedback = emailInput.nextElementSibling;
 
@@ -31,6 +32,16 @@ function updateValidationState() {
 emailInput.addEventListener('blur', function () {
   updateValidationState();
 });
+
+function openModal() {
+  modal.classList.remove('is-hidden');
+  document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+  modal.classList.add('is-hidden');
+  document.body.classList.remove('modal-open');
+}
 
 sendButton.addEventListener('click', async event => {
   event.preventDefault();
@@ -80,7 +91,7 @@ sendButton.addEventListener('click', async event => {
     );
 
     if (response.status >= 200 && response.status < 300) {
-      modal.classList.remove('is-hidden');
+      openModal();
       form.reset();
       emailInput.classList.remove('valid', 'invalid');
       feedback.querySelector('.valid-feedback').style.display = 'none';
@@ -103,6 +114,16 @@ sendButton.addEventListener('click', async event => {
   }
 });
 
-closeModalBtn.addEventListener('click', () => {
-  modal.classList.add('is-hidden');
+closeModalBtn.addEventListener('click', closeModal);
+
+backdrop.addEventListener('click', event => {
+  if (event.target === backdrop) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
 });
