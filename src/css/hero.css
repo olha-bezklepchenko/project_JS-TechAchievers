@@ -1,3 +1,4 @@
+
 .hero {
   margin-bottom: 32px;
 }
@@ -28,7 +29,7 @@
 }
 .hero-title {
   font-weight: 500;
-  font-size: 500px;
+  font-size: 50px;
   line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
