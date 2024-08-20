@@ -29,6 +29,16 @@
   height: 44px;
   margin-right: 8px;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .work-tgt-title {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +49,14 @@
   font-weight: 500;
   font-size: 40px;
   letter-spacing: -0.03em;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+.work-tgt-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .work-tgt-span {
   margin: 0 8px;
@@ -187,7 +205,8 @@
   color: #fafafa;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-tgt-contacts-list {
@@ -199,10 +218,11 @@
 }
 .work-tgt-form-btn:hover {
   background-color: #e0373f;
+  transform: scale(0.95);
+  box-shadow: 0px 5px 75px -43px rgba(252, 178, 181, 1) inset;
 }
 .work-tgt-form-btn:focus {
   background-color: #e0373f;
-  transform: scale(0.95);
 }
 
 .work-tgt-contacts-item {
@@ -325,6 +345,7 @@
 .modal-open {
   overflow: hidden;
 }
+
 /* Tablet */
 @media screen and (min-width: 768px) {
   .footer-container::before {
@@ -443,16 +464,6 @@
     align-items: center;
     padding: 10px 12px;
   }
-  /* .work-tgt-contacts-item + .mail {
-    width: 178px;
-  }
-
-  .work-tgt-contacts-item + .tel {
-    width: 178px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
   .footer::before {
     background-image: none;
   }
