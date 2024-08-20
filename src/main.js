@@ -1,6 +1,4 @@
 import './js/libraries.js';
-import './js/refs.js';
-import './js/portfolio-api.js';
 import './js/header.js';
 import './js/about-me.js';
 import './js/projects.js';
