@@ -34,6 +34,7 @@
   gap: 6px;
   flex-wrap: wrap;
 }
+
 .project-tag-item {
   display: flex;
 
@@ -72,11 +73,16 @@
   letter-spacing: -0.32px;
 
   border-radius: 60px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-button-link:hover {
+  transform: scale(0.95);
 }
 
 .project-button-link:focus {
-  transform: scale(0.95);
+  box-shadow: 0px 8px 52px -18px rgba(48, 24, 24, 1);
 }
 
 .project-visual {
@@ -161,6 +167,11 @@
 
   .project-visual {
     padding: 120px 45px;
+  }
+
+  .project-visual-pic {
+    width: 614px;
+    height: 385px;
   }
 
   .projects-btn-wrapper {
