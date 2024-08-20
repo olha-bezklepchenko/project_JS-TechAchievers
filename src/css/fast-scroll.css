@@ -13,8 +13,6 @@
   height: 45px;
   transition: border-color 250ms linear, opacity 250ms linear,
     transform 250ms linear, visibility 250ms linear;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .scroll-up {
