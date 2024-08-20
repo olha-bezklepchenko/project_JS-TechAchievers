@@ -127,3 +127,15 @@ document.addEventListener('keydown', event => {
     closeModal();
   }
 });
+
+function onScroll() {
+  const title = document.querySelector('.work-tgt-title');
+  const titlePosition = title.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if (titlePosition < screenPosition) {
+    title.classList.add('visible');
+  }
+}
+
+window.addEventListener('scroll', onScroll);
