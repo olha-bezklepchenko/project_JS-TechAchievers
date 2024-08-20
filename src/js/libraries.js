@@ -21,12 +21,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 //Body-scroll-lock
 import * as bodyScrollLock from 'body-scroll-lock';
 
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
-
 //exports
 export {
   axios,
@@ -38,7 +32,4 @@ export {
   Mousewheel,
   iziToast,
   bodyScrollLock,
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
 };
