@@ -1,25 +1,50 @@
-import { refs } from './refs.js';
+const scrollUp = document.querySelector('.scroll-up');
+const scrollDown = document.querySelector('.scroll-down');
+const heroEl = document.querySelector('.hero');
+const footerEl = document.querySelector('.footer');
 
-// Додаємо обробник подій(до глобального об'єкту window) який спрацьовує під час скролу
-window.addEventListener('scroll', onVisibleOrHiddenScrollUp);
-// Додаємо обробник подій до кнопки(scroll-up).
-refs.scrollUp.addEventListener('click', onScrollUp);
+// Додаємо обробник подій для прокрутки
+window.addEventListener('scroll', onVisibleOrHiddenScrollButtons);
 
-// Функція яка в залежності від степені прокрутки(в пікселях) приховує, або показує кнопку(scroll-up)
-function onVisibleOrHiddenScrollUp() {
-  // Якщо скрол сторінки, більше ніж висота(крайня нижня точка блоку) блоку Hero, прибирається клас hidden, кнопка з'являється.
-  if (window.scrollY > refs.heroEl.clientHeight) {
-    refs.scrollUp.classList.remove('hidden');
-    // якщо меньше, тоді додається клас hidden, кнопка приховується.
+// Додаємо обробники подій для кнопок
+scrollUp.addEventListener('click', onScrollUp);
+scrollDown.addEventListener('click', onScrollDown);
+
+function onVisibleOrHiddenScrollButtons() {
+  // Поточне значення прокручування  сторінки
+  const scrollPosition = window.scrollY;
+
+  // Отримуємо розміри та позиції елементів
+  const heroHeight = heroEl.offsetHeight;
+  const footerTop = footerEl.getBoundingClientRect().top + scrollPosition;
+
+  // Логіка для кнопки "Scroll Up"
+  if (scrollPosition > heroHeight) {
+    scrollUp.classList.remove('hidden');
   } else {
-    refs.scrollUp.classList.add('hidden');
+    scrollUp.classList.add('hidden');
+  }
+
+  // Логіка для кнопки "Scroll Down"
+  if (scrollPosition < footerTop - window.innerHeight) {
+    scrollDown.classList.remove('hidden');
+  } else {
+    scrollDown.classList.add('hidden');
   }
 }
 
-// Функція яка повертає скрол на позицію 0px по вертикалі.
+// Прокручує сторінку вгору при натисканні кнопки "Scroll Up"
 function onScrollUp() {
   window.scrollTo({
     top: 0,
+    behavior: 'smooth',
+  });
+}
+
+// Прокручує сторінку в самий низ при натисканні кнопки "Scroll Down"
+function onScrollDown() {
+  window.scrollTo({
+    top: document.body.scrollHeight,
     behavior: 'smooth',
   });
 }
