@@ -20,15 +20,21 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
-
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-content.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.about-ac-svg {
+    stroke: #fafafa;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
 }
 
 .about-accent-word {
@@ -49,8 +55,7 @@
 
 .about-ac-svg {
     stroke: #fafafa;
-    transition: transform 0.5s ease;
-    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-accordion-btn {
@@ -74,7 +79,7 @@
 .about-accordion-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 12px;
+    padding-bottom: 32px;
 }
 
 .about-ac-text {
@@ -106,86 +111,7 @@
     overflow: hidden;
 }
 
-@media screen and (min-width: 375px) {}
-
-@media screen and (min-width: 768px) {
-    .about-section {
-        margin-bottom: 64px;
-    }
-
-    /* about-me text and photo */
-
-    .about-text-container {
-        height: 700px;
-        padding: 64px;
-    }
-
-    .about-content {
-        font-size: 38px;
-        line-height: 1.05263;
-    }
-
-    .about-img {
-        height: 700px;
-    }
-
-    /* about-me accordion */
-
-    .about-ac-svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .about-accordion-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .accordion-container>.about-accordion-item>.about-accordion-header {
-        margin-bottom: 8px;
-    }
-
-    .about-ac-text {
-        margin-bottom: 16px;
-    }
-
-    .about-ac-text:last-child {
-        margin-bottom: 32px;
-    }
-
-    .about-accordion-item {
-        margin-top: 32px;
-    }
-
-    .about-accordion-container {
-        margin-bottom: 64px;
-    }
-
-    /* about-me text and photo */
-
-    .about-text-container {
-        width: 680px;
-        margin-bottom: 0px;
-    }
-
-    /* about-me accordion */
-
-    .about-ac-panel {
-        padding-left: 696px;
-        padding-right: 68px;
-    }
-
-    .about-ac-text {
-        margin-bottom: 32px;
-    }
-
-    .about-accordion-container {
-        margin-bottom: 96px;
-    }
-}
-
 /* about-me swiper */
-
 .about-wrapper {
     display: flex;
     justify-content: space-between;
@@ -244,7 +170,59 @@
     stroke: #fff;
 }
 
+@media screen and (min-width: 375px) {}
+
 @media screen and (min-width: 768px) {
+    .about-section {
+        margin-bottom: 64px;
+    }
+
+    /* about-me text and photo */
+
+    .about-text-container {
+        height: 700px;
+        padding: 64px;
+    }
+
+    .about-content {
+        font-size: 38px;
+        line-height: 1.05263;
+    }
+
+    .about-img {
+        height: 700px;
+    }
+
+    /* about-me accordion */
+
+    .about-ac-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .about-accordion-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-ac-text {
+        margin-bottom: 16px;
+    }
+
+    .about-ac-text:last-child {
+        margin-bottom: 32px;
+    }
+
+    .about-accordion-item {
+        margin-top: 32px;
+    }
+
+    .about-accordion-container {
+        margin-bottom: 64px;
+    }
+
+    /* about-me swiper */
+
     .skills-container.swiper {
         width: 600px;
         height: 200px;
@@ -266,6 +244,35 @@
 }
 
 @media screen and (min-width: 1440px) {
+    .about-section {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 96px;
+    }
+
+    /* about-me text and photo */
+
+    .about-text-container {
+        width: 680px;
+        margin-bottom: 0px;
+    }
+
+    /* about-me accordion */
+
+    .about-ac-panel {
+        padding-left: 696px;
+        padding-right: 68px;
+    }
+
+    .about-ac-text {
+        margin-bottom: 32px;
+    }
+
+    .about-accordion-container {
+        margin-bottom: 96px;
+    }
+
+    /* about-me swiper */
     .about-wrapper {
         width: 1312px;
         margin: 0 auto;

@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 new Accordion(document.querySelector('.accordion-container'), {
-  duration: 1000,
+  duration: 700,
   showMultiple: true,
   elementClass: 'about-accordion-item',
   panelClass: 'about-ac-panel',
