@@ -1,11 +1,12 @@
 .covers .container {
     padding: 0;
+    width: 100%;
 }
 
-.content {
+/* .content {
     width: 100%;
     overflow: hidden;
-}
+} */
 
 .marquee {
     overflow: hidden;
@@ -13,7 +14,7 @@
     font-size: 34px;
     text-transform: uppercase;
     width: 100%;
-    height: 50vh;
+    height: 508px;
     background-image: url(../img/covers/elements_vectors.png);
     background-size: cover;
 }
@@ -48,6 +49,11 @@
     animation-play-state: paused;
 }
 
+.marquee-line img {
+    width: 282px;
+    height: 162px;
+}
+
 @keyframes marqueeLine {
     from {
         transform: translateX(-10%);
@@ -59,9 +65,10 @@
 }
 
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
     .marquee {
         width: 100%;
+
     }
 
     .marquee-line img {
@@ -79,10 +86,12 @@
         width: 282px;
         height: 162px;
     }
-}
+} */
 
 @media screen and (min-width: 768px) {
-
+    .marquee {
+        height: 960px;
+    }
 
     .marquee-line {
         margin: 30px;
@@ -96,9 +105,8 @@
 
 @media screen and (min-width: 1440px) {
 
-    .marquee {
+    .covers .container {
         width: 1440px;
-        height: 960px;
     }
 
 }
