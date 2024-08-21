@@ -1,7 +1,7 @@
 import { Accordion } from './libraries';
 
 new Accordion(document.querySelector('.faq-list'), {
-  duration: 200,
+  duration: 700,
   showMultiple: true,
   elementClass: 'faq-item',
   panelClass: 'faq-panel',

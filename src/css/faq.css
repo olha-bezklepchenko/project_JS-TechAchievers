@@ -14,6 +14,11 @@
   width: 100%;
   padding: 20px 0;
 }
+
+.faq-item-title {
+  padding-bottom: 16px;
+}
+
 .faq-top-box {
   display: flex;
   justify-content: space-between;
@@ -49,8 +54,16 @@
   overflow: hidden;
 }
 
+.faq-btn-open {
+  transition: transform 0.5s ease;
+}
+
+.faq-btn:hover .faq-btn-open {
+  transform: scale(1.2);
+}
+
 .faq-item.faq-active .faq-top-box {
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .faq-item-title {
@@ -82,6 +95,7 @@
 
   .faq-item-title {
     max-width: 574px;
+    padding-bottom: 26px;
   }
 
   .faq-item:last-child .faq-item-title {
