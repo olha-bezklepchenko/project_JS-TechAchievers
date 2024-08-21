@@ -251,6 +251,7 @@
 .work-tgt-contacts-item.tel {
   width: 120px;
 }
+
 .work-tgt-contacts-item:hover .work-tgt-contacts-mail,
 .work-tgt-contacts-item:focus .work-tgt-contacts-mail {
   transform: scale(1.05);
@@ -277,14 +278,9 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-tgt-contacts-mail:hover,
-.work-tgt-contacts-mail:focus {
-  transform: scale(1.05);
-}
 .work-tgt-contacts-tel:hover,
 .work-tgt-contacts-tel:focus {
   transform: scale(1.05);
-}
 
 .backdrop {
   z-index: 1;
