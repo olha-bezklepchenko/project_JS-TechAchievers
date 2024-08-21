@@ -42,7 +42,7 @@
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInUp 2.0s ease-out forwards;
-  width: 343px;
+  width: 100%;
 }
 
 @keyframes fadeInUp {
@@ -109,6 +109,10 @@
   .hero-social-list {
     flex-wrap: nowrap;
   }
+.hero-title {
+  width: 343px;
+}
+
 }
 
 @media screen and (min-width: 768px) {
