@@ -32,7 +32,16 @@
 .benefits-text-content {
     margin-bottom: 8px;
 }
+.anim.right-header {
+    transform: translateX(-20%);
+    transition: all 2s;
+    opacity: 0;
+}
 
+.anim.right-header.active {
+    transform: translateX(0);
+    opacity: 1;
+}
 .benefits-btn {
     display: flex;
     align-items: center;

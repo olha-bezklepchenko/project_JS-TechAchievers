@@ -6,7 +6,6 @@ import {
   axios,
   iziToast,
 } from './libraries.js';
-import { refs } from './refs.js';
 
 const swiper = new Swiper('.reviews-swiper', {
   modules: [Navigation, Keyboard, Mousewheel],
@@ -40,6 +39,8 @@ const swiper = new Swiper('.reviews-swiper', {
     prevEl: '.reviews-btn-prev',
   },
 });
+
+const reviewsList = document.querySelector('.reviews-list');
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api/reviews';
 
@@ -78,7 +79,7 @@ function renderCards(data) {
 async function loadReviews() {
   try {
     const response = await searchReviews();
-    refs.reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
+    reviewsList.insertAdjacentHTML('beforeend', renderCards(response));
   } catch (error) {
     console.log(error);
     iziToast.error({
@@ -90,7 +91,7 @@ async function loadReviews() {
       theme: 'dark',
     });
 
-    refs.reviewsList.insertAdjacentHTML(
+    reviewsList.insertAdjacentHTML(
       'beforeend',
       `<li class="item-message"><p>Not Found</p></li>`
     );

@@ -1,21 +1,20 @@
 .covers .container {
     padding: 0;
+    width: 100%;
 }
 
-.content {
+/* .content {
     width: 100%;
     overflow: hidden;
-}
+} */
 
 .marquee {
-    right: -800px;
-    left: 0;
     overflow: hidden;
     font-weight: 600;
     font-size: 34px;
     text-transform: uppercase;
     width: 100%;
-    height: 50vh;
+    height: 508px;
     background-image: url(../img/covers/elements_vectors.png);
     background-size: cover;
 }
@@ -38,59 +37,67 @@
 
 .marquee-line {
     flex-shrink: 0;
-    margin: 25px;
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
     animation-name: marqueeLine;
-    animation-duration: 7s;
-    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-play-state: paused;
 }
 
+.marquee-line img {
+    width: 282px;
+    height: 162px;
+}
+
 @keyframes marqueeLine {
     from {
-        transform: translateX(-20%);
+        transform: translateX(-10%);
     }
 
     to {
-        transform: translateX(-180%);
+        transform: translateX(-400%);
     }
 }
 
-@media screen and (max-width: 375px) {
+
+/* @media screen and (max-width: 375px) {
     .marquee {
         width: 100%;
+
     }
 
-    .marquee-line {
-        width: 100%;
+    .marquee-line img {
+        width: 250px;
         height: auto;
     }
 }
 
 @media screen and (min-width: 375px) {
-    .marquee {
-        width: 375px;
-        height: 508px;
+    .covers .container {
+        width: 100%;
     }
 
-    .marquee-line {
+    .marquee-line img {
         width: 282px;
         height: 162px;
     }
-}
+} */
 
 @media screen and (min-width: 768px) {
-
     .marquee {
-        width: 768px;
         height: 960px;
     }
 
     .marquee-line {
+        margin: 30px;
+    }
+
+    .marquee-line img {
         width: 544px;
         height: 314px;
     }
@@ -98,9 +105,8 @@
 
 @media screen and (min-width: 1440px) {
 
-    .marquee {
+    .covers .container {
         width: 1440px;
-        height: 960px;
     }
 
 }
