@@ -16,7 +16,7 @@
 }
 
 .faq-item-title {
-  padding-bottom: 16px;
+  max-width: 241px;
 }
 
 .faq-top-box {
@@ -66,8 +66,8 @@
   /* margin-bottom: 16px; */
 }
 
-.faq-item-title {
-  max-width: 241px;
+.faq-text {
+  padding-top: 16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -95,11 +95,15 @@
 
   .faq-item-title {
     max-width: 574px;
-    padding-bottom: 26px;
+    /* padding-bottom: 26px; */
   }
 
   .faq-item:last-child .faq-item-title {
     max-width: 485px;
+  }
+
+  .faq-text {
+    padding-top: 26px;
   }
 }
 
