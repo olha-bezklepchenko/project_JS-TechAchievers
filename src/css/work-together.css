@@ -281,6 +281,7 @@
 .work-tgt-contacts-tel:hover,
 .work-tgt-contacts-tel:focus {
   transform: scale(1.05);
+}
 
 .backdrop {
   z-index: 1;
