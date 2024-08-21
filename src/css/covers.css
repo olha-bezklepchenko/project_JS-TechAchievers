@@ -8,8 +8,6 @@
 }
 
 .marquee {
-    right: -800px;
-    left: 0;
     overflow: hidden;
     font-weight: 600;
     font-size: 34px;
@@ -38,7 +36,7 @@
 
 .marquee-line {
     flex-shrink: 0;
-    margin: 25px;
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,12 +58,13 @@
     }
 }
 
+
 @media screen and (max-width: 375px) {
     .marquee {
         width: 100%;
     }
 
-    .marquee-line {
+    .marquee-line img {
         width: 100%;
         height: auto;
     }
@@ -77,7 +76,7 @@
         height: 508px;
     }
 
-    .marquee-line {
+    .marquee-line img {
         width: 282px;
         height: 162px;
     }
@@ -91,6 +90,10 @@
     }
 
     .marquee-line {
+        margin: 30px;
+    }
+
+    .marquee-line img {
         width: 544px;
         height: 314px;
     }
