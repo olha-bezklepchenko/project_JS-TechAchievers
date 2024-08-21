@@ -1,35 +1,40 @@
-import { Swiper, Navigation, Keyboard, Mousewheel, Accordion } from './libraries.js';
+import {
+  Swiper,
+  Navigation,
+  Keyboard,
+  Mousewheel,
+  Accordion,
+} from './libraries.js';
 
 const swiper = new Swiper('.skills-container', {
-    modules: [Navigation, Keyboard, Mousewheel],
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 0,
-    
-    keyboard: {
+  modules: [Navigation, Keyboard, Mousewheel],
+  direction: 'horizontal',
+  loop: true,
+  spaceBetween: 0,
+
+  keyboard: {
     enabled: true,
   },
-    
-    mousewheel: {
+  mousewheel: {
     enabled: true,
     invert: true,
   },
-  
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: 6,
-      },
-    },
 
-    navigation: {
-      nextEl: '.about-btn-next',
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
     },
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
+  },
+
+  navigation: {
+    nextEl: '.about-btn-next',
+  },
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -45,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
   swiper.update();
 });
 
-
 new Accordion(document.querySelector('.accordion-container'), {
   duration: 1000,
   showMultiple: true,
@@ -55,7 +59,6 @@ new Accordion(document.querySelector('.accordion-container'), {
   activeClass: 'about-active',
   onOpen: onOpen,
   onClose: onClose,
-
 });
 
 function turnBtn(element, degrees) {
@@ -72,3 +75,15 @@ function onOpen(currentElement) {
 function onClose(currentElement) {
   turnBtn(currentElement, 0);
 }
+
+function onScroll() {
+  const title = document.querySelector('.about-content');
+  const titlePosition = title.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if (titlePosition < screenPosition) {
+    title.classList.add('visible');
+  }
+}
+
+window.addEventListener('scroll', onScroll);
