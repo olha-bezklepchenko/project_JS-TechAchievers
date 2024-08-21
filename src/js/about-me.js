@@ -1,26 +1,29 @@
-import { Swiper, Navigation, Keyboard, Accordion } from './libraries.js';
+import { Swiper, Navigation, Keyboard, Mousewheel, Accordion } from './libraries.js';
 
 const swiper = new Swiper('.skills-container', {
-    modules: [Navigation, Keyboard],
+    modules: [Navigation, Keyboard, Mousewheel],
     direction: 'horizontal',
     loop: true,
+    spaceBetween: 0,
     
-    wrapperClass: 'about-skills',
-    slideClass: 'about-sk-item',
-
     keyboard: {
     enabled: true,
-    },
+  },
+    
+    mousewheel: {
+    enabled: true,
+    invert: true,
+  },
   
     breakpoints: {
       320: {
-        slidesPerView: 1,
-      },
-      768: {
         slidesPerView: 2,
       },
+      768: {
+        slidesPerView: 3,
+      },
       1440: {
-        slidesPerView: 5,
+        slidesPerView: 6,
       },
     },
 
@@ -29,9 +32,22 @@ const swiper = new Swiper('.skills-container', {
     },
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const skillsList = document.querySelector('.about-skills');
+
+  const listItems = document.querySelectorAll('.about-sk-item');
+
+  listItems.forEach(function (item) {
+    const clone = item.cloneNode(true);
+    skillsList.appendChild(clone);
+  });
+
+  swiper.update();
+});
+
 
 new Accordion(document.querySelector('.accordion-container'), {
-  duration: 200,
+  duration: 1000,
   showMultiple: true,
   elementClass: 'about-accordion-item',
   panelClass: 'about-ac-panel',
