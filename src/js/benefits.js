@@ -7,7 +7,7 @@ let options = {
 let callback = function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log('find', entry);
+            
             entry.target.classList.add('active');
         }
     });
