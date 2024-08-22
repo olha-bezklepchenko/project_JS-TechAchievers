@@ -6,6 +6,8 @@ import {
   Accordion,
 } from './libraries.js';
 
+cloneSlides();
+
 const swiper = new Swiper('.skills-container', {
   modules: [Navigation, Keyboard, Mousewheel],
   direction: 'horizontal',
@@ -37,18 +39,15 @@ const swiper = new Swiper('.skills-container', {
   },
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const skillsList = document.querySelector('.about-skills');
+function cloneSlides() {
+  const swiperWrapper = document.querySelector('.about-skills');
+  const slides = document.querySelectorAll('.about-sk-item');
 
-  const listItems = document.querySelectorAll('.about-sk-item');
-
-  listItems.forEach(function (item) {
-    const clone = item.cloneNode(true);
-    skillsList.appendChild(clone);
+  slides.forEach(slide => {
+    const clonedSlideEnd = slide.cloneNode(true);
+    swiperWrapper.appendChild(clonedSlideEnd);
   });
-
-  swiper.update();
-});
+}
 
 new Accordion(document.querySelector('.accordion-container'), {
   duration: 700,
